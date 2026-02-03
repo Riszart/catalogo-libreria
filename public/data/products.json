@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Bolígrafo Azul",
+    "image": "https://erp.papeleradeloriente.pe/static/media/imagenes/producto/DPMlyFHIMeWRHKuP-card.jpg",
+    "categoria": "boligrafos",
+    "precio": 1.50,
+    "marca": "Bic"
+  },
+  { 
+    "id": 2,
+    "nombre": "Cuaderno A4",
+    "image": "https://erp.papeleradeloriente.pe/static/media/imagenes/producto/DPMlyFHIMeWRHKuP-card.jpg",
+    "categoria": "cuadernos",
+    "precio": 5.00 ,
+    "marca": "Oxford"
+  },
+  { 
+    "id": 3,
+    "nombre": "Hojas Colores",
+    "image": "https://erp.papeleradeloriente.pe/static/media/imagenes/producto/DPMlyFHIMeWRHKuP-card.jpg",
+    "categoria": "papeleria",
+    "precio": 3.00,
+    "marca": "Faber-Castell"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "nombre": "papeleria",
+    "img": "https://erp.papeleradeloriente.pe/static/media/imagenes/categoria/papeleria.jpg"
+  },
+  { 
+    "id": 2,
+    "nombre": "cuadernos",
+    "img": "https://erp.papeleradeloriente.pe/static/media/imagenes/categoria/cuadernos.jpg"
+  },
+  { 
+    "id": 3,
+    "nombre": "boligrafos",
+    "img": "https://erp.papeleradeloriente.pe/static/media/imagenes/categoria/boligrafos.jpg"
+  }
+]
