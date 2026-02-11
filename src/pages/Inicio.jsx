@@ -43,11 +43,6 @@ export function Inicio({categorias, productos}){
             ))}
           </div>
         </section>
-        {/* <section>
-          <div className="h-20 flex justify-between items-center p-10 capitalize font-bold text-2xl">
-            <h3 className="text-[#84A5B8]">marcas</h3>
-          </div>
-        </section> */}
       </section>
     </main>
   )

@@ -1,7 +1,9 @@
 import { Footer } from "./components/Footer.jsx"
 import { Navbar } from "./components/Navbar.jsx"
 import { Inicio } from "./pages/Inicio.jsx"
+import { DetalleProducto } from "./pages/DetalleProducto.jsx"
 import { Category } from "./pages/Category.jsx"
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 import { useState , useEffect } from "react"
@@ -54,6 +56,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Inicio productos={productos} categorias={categoria}/>}/>
             <Route path="/categoria/:category" element={<Category key="cat" productos={productos} categorias={categoria}/>}/>
+            <Route path="/producto/:id" element={<DetalleProducto productos={productos}/>}/>
           </Routes>
         <Footer categorias={categoria}/>
       </Router>
