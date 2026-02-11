@@ -3,27 +3,21 @@ import { useEffect, useState } from 'react'
 import logo from '../assets/logo-lema.png'
 
 export function Footer({categorias}){
-  // const [categoria,setCategorias] = useState([])
-
-  // useEffect(()=>{
-  //   fetch('/data/category.json')
-  //     .then(res => res.json())
-  //     .then(data => setCategorias(data))
-  //     .catch(err => console.error("error cargando categorias",err))
-  // })
-
 
   const [marcas,setMarcas] = useState([])
-  fetch('/data/brand.json')
-    .then(res => res.json())
-    .then(data => setMarcas(data))
-    .catch(err => console.error("error cargando marcas",err))
+  useEffect(()=>{
+    fetch('/data/brand.json')
+      .then(res => res.json())
+      .then(data => setMarcas(data))
+      .catch(err => console.error("error cargando marcas",err))
+  },[])
+
 
   return (
     <>
       <footer className="flex flex-col lg:flex-row w-full justify-evenly bg-[#111827] text-white pb- lg:pb-20 lg:pt-20 p-5">
         <section>
-          <div className='flex justify-center'><img src={logo} alt="" className='h-30'/></div>
+          <div className=' flex justify-center '><img src={logo} alt="" className='h-30'/></div>
           <p className="lg:w-80 mt-4 text-gray-400 text-justify">Donde tus ideas cobran forma. Encuentra las herramientas perfectas para darle color a tu imaginación y orden a tus proyectos.</p>
         </section>
         <section className='mt-4 lg:mt-0'>
@@ -54,7 +48,7 @@ export function Footer({categorias}){
         </section>
       </footer>
       <div className="flex justify-center items-center bg-[#111827] text-gray-500 h-10 border-t">
-        <p>Desarrollado por RISZART DARYL</p>
+        <p>@2026 Todos los derechos reservados</p>
       </div>
     </>
   )

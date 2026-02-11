@@ -1,31 +1,35 @@
 import { Btn } from './Btn'
+import { IconBurger } from './Icons'
 import { Link , NavLink} from 'react-router-dom'
 
 import imge_background from '../assets/Gemini_Generated_Image_6yavu06yavu06yav.png'
 import logo from '../assets/logo-lema.png'
-import { useState } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 
 export function Navbar({categorias}){
   const [showNav,setShowNav] = useState(false)
 
   return (
     <nav className='z-100 w-full fixed bg-white top-0'>
-      <div className='w-10 h-10 bg-amber-300 absolute lg:hidden' onClick={()=>{setShowNav(!showNav)}}></div>
+      <div className='w-10 h-10 p-1 absolute lg:hidden border-2 border-indigo-600/50 m-2 text-indigo-600 rounded-md' onClick={()=>{setShowNav(!showNav)}}>
+        <IconBurger/>
+      </div>
       <section className={'flex justify-between gap-10 items-center border-b-2 border-[#D1D9E6] pl-10 pr-10 capitalize h-15'} >
-        <div className={`lg:flex flex-col left-0 top-14 lg:top-0 absolute lg:relative lg:flex-row lg:justify-center lg:gap-2 lg:items-center bg-white ${showNav?'flex':'hidden'}`}>
+        <div className={`border-t-2 border-indigo-600 lg:flex flex-col left-0 top-14 lg:top-0 absolute lg:relative lg:flex-row lg:justify-center lg:gap-2 lg:items-center bg-white transition-all duration-300 ease-in-out flex text-center ${showNav ?' opacity-100 translate-y-0':'h-0 opacity-0  lg:opacity-100 lg:translate-y-0'}`}>
           {categorias.map(category=>(
-            <NavLink key={category.id} 
+            <NavLink key={category.id} onClick={()=>{setShowNav(false)}}
               to={`/categoria/${category.nombre.toLowerCase()}`}
-              className={({ isActive }) => `px-10 py-2 mx-5 my-2 lg:my-0 lg:mx-0 lg:px-5 lg:py-1 rounded-lg hover:bg-indigo-50 ${
+              className={({ isActive }) => `border-l border-b border-indigo-600  px-10 py-2 mx-5 my-2 lg:my-0 lg:mx-0 lg:px-5 lg:py-1 lg:rounded-lg hover:bg-indigo-50 ${
                 isActive 
                   ? "text-white font-semibold bg-indigo-600 hover:bg-indigo-600" 
                   : "text-gray-600 "}`}
-            >{category.nombre}
+            >{category.nombre} 
             </NavLink>
           ))}
         </div>
         <div className='absolute right-0 lg:relative'>
           <Link to='/' ><img className='h-15' src={logo} alt="" /></Link>
+
         </div>
       </section>
     </nav>
