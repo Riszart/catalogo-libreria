@@ -15,7 +15,7 @@ export function Navbar({categorias}){
         <IconBurger/>
       </div>
       <section className={'flex justify-between gap-10 items-center border-b-2 border-[#D1D9E6] pl-10 pr-10 capitalize h-15'} >
-        <div className={`border-t-2 border-indigo-600 lg:flex flex-col left-0 top-14 lg:top-0 absolute lg:relative lg:flex-row lg:justify-center lg:gap-2 lg:items-center bg-white transition-all duration-300 ease-in-out flex text-center ${showNav ?' opacity-100 translate-y-0':'h-0 opacity-0  lg:opacity-100 lg:translate-y-0'}`}>
+        <div className={`overflow-hidden border-t-2 border-indigo-600 lg:flex flex-col left-0 top-14 lg:top-0 absolute lg:relative lg:flex-row lg:justify-center lg:gap-2 lg:items-center bg-white transition-all duration-300 ease-in-out flex text-center ${showNav ?' opacity-0 h-0':'opacity-100  lg:opacity-100'}`}>
           {categorias.map(category=>(
             <NavLink key={category.id} onClick={()=>{setShowNav(false)}}
               to={`/categoria/${category.nombre.toLowerCase()}`}
@@ -38,7 +38,7 @@ export function Navbar({categorias}){
 
 export function HeaderMain(){
   return (
-    <section style={{ backgroundImage: `url(${imge_background})` }} className="bg-cover bg-center h-96 w-full flex justify-center items-center">
+    <section style={{ backgroundImage: `url(${imge_background})` }} className="bg-cover bg-center h-96 w-full flex justify-center items-center p-4">
       <div className="flex flex-col items-center gap-5 ">
         <strong className='bg-indigo-300/60 px-4 py-2 border-2 border-indigo-600 rounded-2xl text-indigo-600'>Año escolar 2026</strong>
         <h1 className="text-4xl lg:text-6xl text-indigo-600 font-extrabold text-center">
@@ -47,8 +47,8 @@ export function HeaderMain(){
         </h1>
         <p className='text-center'>Todo lo que un estudiante nesesita, crayones calculadoras</p>
         <div className="flex gap-5 flex-row">
-          <Btn text={"contactanos"}/>
-          <Btn text={"catalogo"}/>
+          <Btn text={"contactanos"} className={"bg-indigo-600"}/>
+          <Btn text={"catalogo"} className={"bg-indigo-600"}/>
         </div>
       </div>
     </section>

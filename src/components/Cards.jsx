@@ -20,7 +20,7 @@ export function CardProduct({producto}) {
       <div className="flex flex-col gap-2">
         <strong className="bg-indigo-600/30 text-indigo-600 text-xs uppercase text-center p-1">{producto.marca}</strong>
         <p className="font-extrabold text-xl capitalize">S/. <span>{producto.precio}</span></p>
-        <Btn text={'contactanos'} className={"w-full"}/>
+        <Btn text={'contactanos'} className={"w-full bg-indigo-600"}/>
       </div>
     </article>
   )
@@ -39,9 +39,9 @@ export function CardBlog({producto}) {
           <strong className="text-gray-600 text-sm my-2">S/. <span>{producto.precio}</span></strong>
         </div>
         <Link to={`/producto/${producto.id}`}>
-          <p>ver detalles</p>
+          <p className="bg-indigo-600 rounded-lg py-2 text-center mb-2 capitalize font-bold text-white active:bg-indigo-200 active:text-indigo-600">ver producto</p>
         </Link>
-        <Btn text={'contactanos'} className="w-full"/>
+        <Btn text={'contactanos'} className="w-full bg-green-500"/>
       </article>    
 
   )

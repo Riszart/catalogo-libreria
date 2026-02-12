@@ -45,7 +45,7 @@ export function DetalleProducto({productos}){
     <main className="mt-20 p-5 flex flex-col gap-5 mb-10">
       <section>
         <strong className="uppercase text-indigo-600 font-extrabold">{`${producto.marca}`}</strong>
-        <h3 className="font-bold text-2xl text-center">{`${producto.nombre}`}</h3>
+        <h3 className="font-bold text-2xl text-center capitalize">{`${producto.nombre}`}</h3>
       </section>
       <section className="w-full aspect-square  p-10 bg-white rounded-md overflow-hidden border border-indigo-600/20"><img src="" alt="" /></section>
       <p className="font-extrabold text-4xl">S/. <span>{`${producto.precio}`}</span></p>
@@ -66,8 +66,8 @@ export function DetalleProducto({productos}){
           <p className=" capitalize font-bold ">descripcion del producto</p>
           <span className="ml-2 flex-1 border-b-2 "></span>
         </div>
-        <div className="p-4">
-          {`${producto.descripcion}`}
+        <div className="p-4 ">
+          {`${producto.descripcion }`}
         </div>
       </section>
     </main>
