@@ -15,11 +15,11 @@ export function Navbar({categorias}){
         <IconBurger/>
       </div>
       <section className={'flex justify-between gap-10 items-center border-b-2 border-[#D1D9E6] pl-10 pr-10 capitalize h-15'} >
-        <div className={`overflow-hidden border-t-2 border-indigo-600 lg:flex flex-col left-0 top-14 lg:top-0 absolute lg:relative lg:flex-row lg:justify-center lg:gap-2 lg:items-center bg-white transition-all duration-300 ease-in-out flex text-center ${showNav ?' opacity-0 h-0':'opacity-100  lg:opacity-100'}`}>
+        <div className={`overflow-hidden border-t-2 border-indigo-600 lg:border-t-0 lg:flex flex-col left-0 top-14 lg:top-0 absolute lg:relative lg:flex-row lg:justify-center lg:gap-2 lg:items-center bg-white transition-all duration-300 ease-in-out flex text-center ${showNav ?' opacity-0 h-0':'opacity-100  lg:opacity-100'}`}>
           {categorias.map(category=>(
             <NavLink key={category.id} onClick={()=>{setShowNav(false)}}
               to={`/categoria/${category.nombre.toLowerCase()}`}
-              className={({ isActive }) => `border-l border-b border-indigo-600  px-10 py-2 mx-5 my-2 lg:my-0 lg:mx-0 lg:px-5 lg:py-1 lg:rounded-lg hover:bg-indigo-50 ${
+              className={({ isActive }) => `border-l border-b lg:border-0 border-indigo-600  px-10 py-2 mx-5 my-2 lg:my-0 lg:mx-0 lg:px-5 lg:py-1 lg:rounded-lg hover:bg-indigo-50 ${
                 isActive 
                   ? "text-white font-semibold bg-indigo-600 hover:bg-indigo-600" 
                   : "text-gray-600 "}`}

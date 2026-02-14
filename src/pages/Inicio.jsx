@@ -23,9 +23,9 @@ export function Inicio({categorias, productos}){
         <HeaderMain/>
       </section>
       <section>
-        <section className="pb-10">
+        <section className="pb-10 lg:px-80">
           <div className="h-20 flex justify-between items-center p-5 capitalize font-bold text-2xl">
-            <h3 className="text-indigo-600">categorias</h3><div className="ml-2 w-full border-b-4 border-indigo-600"></div>
+            <h3 className="text-indigo-600">categorias</h3><div className="ml-2 w-full border-b-4 border-indigo-600 lg:border-0"></div>
           </div>
           <div className="lg:flex flex-col lg:flex-row gap-5 lg:justify-center place-items-center grid grid-cols-2 p-4">
             {categorias.map(categoria => (
@@ -33,9 +33,9 @@ export function Inicio({categorias, productos}){
             ))}
           </div>
         </section>
-        <section className="pb-10 p-4">
+        <section className="pb-10 p-4 lg:px-80">
           <div className="h-20 flex justify-between items-center p-5 capitalize font-bold text-2xl">
-            <h3 className="text-indigo-600">Nuevos</h3><div className="ml-2 w-full border-b-4 border-indigo-600"></div>
+            <h3 className="text-indigo-600">Nuevos</h3><div className="ml-2 w-full border-b-4 border-indigo-600 lg:border-0"></div>
           </div>
           <div className="flex flex-col lg:flex-row justify-center items-center gap-5 mx-5 lg:mx-0">
             {data.map(producto => (

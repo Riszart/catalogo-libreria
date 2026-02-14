@@ -12,13 +12,13 @@ export function CardCategoria({categoria}){
 
 export function CardProduct({producto}) {
   return (
-    <article className="w-full lg:w-55 px-8 py-4 mx-5 lg:mx-0 bg-white rounded-xl border-2 border-indigo-600/30">
-        <p className="lg:font-bold capitalize text-base lg:text-2xl text-center text-indigo-600 font-bold">{producto.nombre}</p>
-      <div className=" aspect-square overflow-hidden border border-indigo-600/30 rounded-t-xl">
-        <img src="https://production-tailoy-repo-magento-statics.s3.amazonaws.com/imagenes/872x872/productos/i/b/o/boligrafos-escarchados-ove-x-12-colores-9770-default-1.jpg" className="w-full h-full" alt="" />
+    <article className="w-full lg:w-55 px-8 lg:px-4 py-4 lg:py-2 mx-5 lg:mx-0 bg-white rounded-xl border-2 border-indigo-600/30 lg:border-indigo-600/10">
+        <p className="lg:font-bold capitalize text-base lg:text-lg text-center text-indigo-600 font-bold">{producto.nombre}</p>
+      <div className=" aspect-square overflow-hidden border border-indigo-600/30 rounded-t-xlv lg:mx-4 lg:p-4">
+        <img src="https://production-tailoy-repo-magento-statics.s3.amazonaws.com/imagenes/872x872/productos/i/b/o/boligrafos-escarchados-ove-x-12-colores-9770-default-1.jpg" className="w-full h-full" alt={`${producto.nombre}`} />
       </div>
       <div className="flex flex-col gap-2">
-        <strong className="bg-indigo-600/30 text-indigo-600 text-xs uppercase text-center p-1">{producto.marca}</strong>
+        <strong className="bg-indigo-600/30 text-indigo-600 text-xs uppercase text-center p-1 lg:mx-4">{producto.marca}</strong>
         <p className="font-extrabold text-xl capitalize">S/. <span>{producto.precio}</span></p>
         <Btn text={'contactanos'} className={"w-full bg-indigo-600"}/>
       </div>
@@ -27,11 +27,12 @@ export function CardProduct({producto}) {
 }
 
 export function CardBlog({producto}) {
+  console.log(producto.url_img)
   return (
-      <article className="bg-white rounded-md border border-indigo-600/20 p-2">
+      <article className="bg-white rounded-md border border-indigo-600/20 p-2 lg:w-full">
         <p className="font-bold capitalize text-sm text-center h-10">{producto.nombre}</p>
         <div className="aspect-square rounded-t-lg pb-2 border border-indigo-600/30 overflow-hidden">
-          <img src="https://production-tailoy-repo-magento-statics.s3.amazonaws.com/imagenes/872x872/productos/i/b/o/boligrafos-escarchados-ove-x-12-colores-9770-default-1.jpg" alt={producto.nombre}/>
+          <img src={`${producto.url_img}`} alt={producto.nombre}/>
         </div>
         <div className="flex flex-col">
           <strong className="text-indigo-600 text-xs uppercase px-4 text-center bg-indigo-600/30 p-1 rounded-b-lg">{producto.marca}</strong>
@@ -43,6 +44,5 @@ export function CardBlog({producto}) {
         </Link>
         <Btn text={'contactanos'} className="w-full bg-green-500"/>
       </article>    
-
   )
 }
