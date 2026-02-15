@@ -3,6 +3,7 @@ import { CardBlog } from "../components/Cards"
 import { useState , useEffect, useMemo } from "react"
 import { useParams } from "react-router-dom"
 
+
 export function Category({productos,categorias}){
 	const { category } = useParams()
   
@@ -11,6 +12,8 @@ export function Category({productos,categorias}){
     if (!categoriaEncontrada) return []
     return productos.filter((p)=> p.categoria_id == categoriaEncontrada.id)
   },[category,productos,categorias])
+
+
 
   return (
     <main className="mt-15">
