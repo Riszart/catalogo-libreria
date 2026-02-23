@@ -45,7 +45,7 @@ function App() {
           error: (err) => {rej(err)}
         })
       })
-      setproductos(product)
+      setproductos(product.filter((p)=>p.stock === "1"))
     }
     dowloandData()
   },[])

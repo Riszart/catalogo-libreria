@@ -18,8 +18,8 @@ export function CardProduct({producto}) {
         <img src={producto.url_img} className="w-full h-full" alt={`${producto.nombre}`} />
       </div>
       <div className="flex flex-col gap-2">
-        <strong className="bg-indigo-600/30 text-indigo-600 text-xs uppercase text-center p-1 lg:mx-4">{producto.marca}</strong>
-        <p className="font-extrabold text-xl capitalize">S/. <span>{producto.precio}</span></p>
+        <strong className="bg-indigo-600/30 text-indigo-600 text-xs uppercase text-center p-1 lg:mx-4 ">{producto.marca}</strong>
+        <p className="capitalize flex justify-between items-center mx-2"> <span className="text-xl font-extrabold">S/.{producto.precio}</span> |<span className="font-bold text-sm text-indigo-600">X mayor</span></p>
         <Btn text={'contactanos'} className={"w-full bg-indigo-600"}/>
       </div>
     </article>
@@ -27,7 +27,6 @@ export function CardProduct({producto}) {
 }
 
 export function CardBlog({producto}) {
-  console.log(producto.url_img)
   return (
       <article className="bg-white rounded-md border border-indigo-600/20 p-2 lg:w-full">
         <p className="font-bold capitalize text-sm text-center h-10">{producto.nombre}</p>
@@ -37,7 +36,7 @@ export function CardBlog({producto}) {
         <div className="flex flex-col">
           <strong className="text-indigo-600 text-xs uppercase px-4 text-center bg-indigo-600/30 p-1 rounded-b-lg">{producto.marca}</strong>
           {/* <p className="text-gray-600 text-sm">{producto.descripcion}</p> */}
-          <strong className="text-gray-600 text-sm my-2">S/. <span>{producto.precio}</span></strong>
+          <strong className="text-gray-600 text-sm my-2">S/. <span >{producto.precio}</span></strong>
         </div>
         <Link to={`/producto/${producto.id}`}>
           <p className="bg-indigo-600 rounded-lg py-2 text-center mb-2 capitalize font-bold text-white active:bg-indigo-200 active:text-indigo-600">ver producto</p>

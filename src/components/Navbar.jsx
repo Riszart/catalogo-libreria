@@ -34,7 +34,6 @@ export function Navbar({categorias}){
         </div>
         <div className='absolute right-0 lg:relative'>
           <Link to='/' ><img className='h-15' src={logo} alt="" /></Link>
-
         </div>
       </section>
     </nav>
