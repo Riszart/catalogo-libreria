@@ -52,7 +52,7 @@ export function HeaderMain(){
         </h1>
         <p className='text-center'>Todo lo que un estudiante nesesita, crayones calculadoras</p>
         <div className="flex gap-5 flex-row">
-          <Btn text={"contactanos"} className={"bg-indigo-600"}/>
+          <Btn text={"contactanos"} className={"bg-green-500"}/>
           <Btn text={"catalogo"} className={"bg-indigo-600"}/>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { Btn } from "./Btn"
 export function CardCategoria({categoria}){
   return(
     <div className="relative w-40 aspect-square flex items-end rounded-xl font-bold bg-white border overflow-hidden">
-      <img className="h-full w-full" src={categoria.urlImg} alt="" />
+      <img className="h-full w-full" src={categoria.urlImg} alt={categoria.nombre} />
       <h4 className="absolute z-10 capitalize pb-8 pl-4">{categoria.nombre}</h4>
     </div>
   )
@@ -13,9 +13,9 @@ export function CardCategoria({categoria}){
 export function CardProduct({producto}) {
   return (
     <article className="w-full lg:w-55 px-8 lg:px-4 py-4 lg:py-2 mx-5 lg:mx-0 bg-white rounded-xl border-2 border-indigo-600/30 lg:border-indigo-600/10">
-        <p className="lg:font-bold capitalize text-base lg:text-lg text-center text-indigo-600 font-bold">{producto.nombre}</p>
+        <p className="lg:font-bold capitalize text-base lg:text-md text-center text-indigo-600 font-bold lg:h-20 ">{producto.nombre}</p>
       <div className=" aspect-square overflow-hidden border border-indigo-600/30 rounded-t-xlv lg:mx-4 lg:p-4">
-        <img src="https://production-tailoy-repo-magento-statics.s3.amazonaws.com/imagenes/872x872/productos/i/b/o/boligrafos-escarchados-ove-x-12-colores-9770-default-1.jpg" className="w-full h-full" alt={`${producto.nombre}`} />
+        <img src={producto.url_img} className="w-full h-full" alt={`${producto.nombre}`} />
       </div>
       <div className="flex flex-col gap-2">
         <strong className="bg-indigo-600/30 text-indigo-600 text-xs uppercase text-center p-1 lg:mx-4">{producto.marca}</strong>
