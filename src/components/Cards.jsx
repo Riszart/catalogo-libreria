@@ -3,7 +3,7 @@ import { Btn } from "./Btn"
 
 export function CardCategoria({categoria}){
   return(
-    <div className="relative w-40 aspect-square flex items-end rounded-xl font-bold bg-white border overflow-hidden">
+    <div className="relative w-40 aspect-square flex items-end rounded-xl font-bold bg-white  overflow-hidden">
       <img className="h-full w-full" src={categoria.url_img} alt={categoria.nombre} />
       <h4 className="absolute z-10 uppercase text-lx spa left-2 bottom-2 px-3 py-1 bg-white rounded-sm border border-indigo-600/50">{categoria.nombre}</h4>
     </div>
